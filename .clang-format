@@ -5,7 +5,7 @@ BasedOnStyle: LLVM
 IndentWidth: 8
 TabWidth: 8
 UseTab: Always
-ContinuationIndentWidth: 16
+ContinuationIndentWidth: 8
 
 # Braces
 BreakBeforeBraces: Custom
@@ -62,10 +62,12 @@ BreakBeforeTernaryOperators: true
 BreakAfterJavaFieldAnnotations: false
 
 # Function declarations
-AllowAllParametersOfDeclarationOnNextLine: false
-AllowAllArgumentsOnNextLine: false
+AllowAllParametersOfDeclarationOnNextLine: true
+AllowAllArgumentsOnNextLine: true
 BinPackArguments: false
 BinPackParameters: false
+PenaltyReturnTypeOnItsOwnLine: 65535 # I don't know what else to set this to
+BreakAfterReturnType: Automatic
 
 # Initializers
 Cpp11BracedListStyle: false
