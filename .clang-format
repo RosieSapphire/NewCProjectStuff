@@ -62,8 +62,8 @@ BreakBeforeTernaryOperators: true
 BreakAfterJavaFieldAnnotations: false
 
 # Function declarations
-AllowAllParametersOfDeclarationOnNextLine: true
-AllowAllArgumentsOnNextLine: true
+AllowAllParametersOfDeclarationOnNextLine: false
+AllowAllArgumentsOnNextLine: false
 BinPackArguments: false
 BinPackParameters: false
 PenaltyReturnTypeOnItsOwnLine: 65535 # I don't know what else to set this to
