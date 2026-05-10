@@ -67,7 +67,6 @@ AllowAllArgumentsOnNextLine: false
 BinPackArguments: false
 BinPackParameters: false
 PenaltyReturnTypeOnItsOwnLine: 65535 # I don't know what else to set this to
-BreakAfterReturnType: Automatic
 
 # Initializers
 Cpp11BracedListStyle: false
