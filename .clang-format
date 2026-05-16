@@ -1,90 +1,119 @@
-# Base style
-BasedOnStyle: LLVM
+Language: Cpp
+ColumnLimit: 80
+UseCRLF: false
 
-# Indentation
-IndentWidth: 8
 TabWidth: 8
-UseTab: Always
+UseTab: Never # I FUCKING HATE THIS BUT SHIT BREAKS IF I DON'T DO IT THIS WAY!
+IndentWidth: 8
+ConstructorInitializerIndentWidth: 8
 ContinuationIndentWidth: 8
 
-# Braces
-BreakBeforeBraces: Custom
-BraceWrapping:
-  AfterFunction: true
-  AfterControlStatement: false
-  AfterEnum: false
-  AfterStruct: false
-  AfterUnion: false
-  AfterExternBlock: true
-  BeforeElse: false
-  IndentBraces: false
-  SplitEmptyFunction: false
-  SplitEmptyRecord: false
-  SplitEmptyNamespace: false
-
-# Control statements
-AllowShortIfStatementsOnASingleLine: false
-AllowShortLoopsOnASingleLine: false
-AllowShortBlocksOnASingleLine: Never
-AllowShortFunctionsOnASingleLine: None
-AlwaysBreakBeforeMultilineStrings: true
-
-# Spacing
-SpaceBeforeParens: ControlStatements
-SpaceBeforeAssignmentOperators: true
-SpaceBeforeCaseColon: false
-SpaceAfterCStyleCast: false
-SpacesInParentheses: false
-SpacesInSquareBrackets: false
-SpaceInEmptyBlock: false
-
-# Pointer alignment
-PointerAlignment: Right
-DerivePointerAlignment: false
-
-# Alignment
-AlignConsecutiveAssignments: true
-AlignConsecutiveDeclarations: true
-AlignConsecutiveMacros: true
-AlignTrailingComments: true
-AlignOperands: true
 AlignAfterOpenBracket: Align
-
-# Switch / case
-IndentCaseLabels: false
-IndentCaseBlocks: true
-
-# Line breaking
-ColumnLimit: 80
-BreakStringLiterals: true
-BreakBeforeBinaryOperators: None
-BreakBeforeTernaryOperators: true
-BreakAfterJavaFieldAnnotations: false
-
-# Function declarations
-AllowAllParametersOfDeclarationOnNextLine: false
+AlignArrayOfStructures: Right
+AlignConsecutiveMacros: AcrossComments
+AlignConsecutiveAssignments: AcrossComments
+AlignConsecutiveBitFields: AcrossComments
+AlignConsecutiveDeclarations: AcrossComments
+AlignEscapedNewlines: Left
+AlignOperands: Align
+AlignTrailingComments: true
 AllowAllArgumentsOnNextLine: false
+AllowAllParametersOfDeclarationOnNextLine: false
+AllowShortEnumsOnASingleLine: false
+AllowShortBlocksOnASingleLine: Never
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: None
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+AlwaysBreakAfterDefinitionReturnType: None # DEPRECATED
+AlwaysBreakAfterReturnType: None
+PenaltyReturnTypeOnItsOwnLine: 65535
+AlwaysBreakBeforeMultilineStrings: false
 BinPackArguments: false
 BinPackParameters: false
-PenaltyReturnTypeOnItsOwnLine: 65535 # I don't know what else to set this to
 
-# Initializers
+BreakBeforeBraces: Custom
+BraceWrapping: 
+  AfterCaseLabel: false
+  AfterClass: true
+  AfterControlStatement: Never
+  AfterEnum: false
+  AfterFunction: true
+  AfterStruct: false
+  AfterUnion: false
+  AfterExternBlock: false
+  BeforeElse: false
+  BeforeWhile: false
+  IndentBraces: false
+  SplitEmptyFunction: true
+  SplitEmptyRecord: true
+
+BreakBeforeBinaryOperators: None
+BreakBeforeTernaryOperators: true
+BreakStringLiterals: false # Specifically because I do this on my own
+QualifierAlignment: Left
 Cpp11BracedListStyle: false
-SpaceBeforeCpp11BracedList: true
+DeriveLineEnding: false
+DerivePointerAlignment: false
+PointerAlignment: Right
+DisableFormat: false
+ExperimentalAutoDetectBinPacking: false
 
-# Includes
-SortIncludes: false
+ForEachMacros: 
+  - BR_FOR_SIMPLELIST
+
 IncludeBlocks: Preserve
-
-# Macros
-IndentPPDirectives: None
-MacroBlockBegin: ""
-MacroBlockEnd: ""
-
-# Preprocessor
-SpacesBeforeTrailingComments: 1
-
-# Misc
+IndentCaseLabels: false
+IndentCaseBlocks: false
+IndentGotoLabels: false
+IndentPPDirectives: BeforeHash
+IndentExternBlock: NoIndent
+IndentRequires: false
+IndentWrappedFunctionNames: false
+InsertTrailingCommas: Wrapped
 KeepEmptyLinesAtTheStartOfBlocks: false
 MaxEmptyLinesToKeep: 1
-ReflowComments: true
+PenaltyBreakAssignment: 2
+PenaltyBreakBeforeFirstCallParameter: 64
+PenaltyBreakComment: 300
+PenaltyBreakFirstLessLess: 120
+PenaltyBreakOpenParenthesis: 0
+PenaltyBreakString: 65535
+PenaltyExcessCharacter: 4294967295
+PenaltyIndentedWhitespace: 0
+PPIndentWidth: -1
+ReflowComments: false # I do this myself. qwq
+RemoveBracesLLVM: true
+SeparateDefinitionBlocks: Always
+SortIncludes: Never
+SpaceAfterCStyleCast: false
+SpaceAfterLogicalNot: false
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeCaseColon: false
+SpaceBeforeCpp11BracedList: true
+SpaceBeforeParens: ControlStatements
+
+SpaceBeforeParensOptions: 
+  AfterControlStatements: true
+  AfterForeachMacros: true
+  AfterFunctionDefinitionName: false
+  AfterFunctionDeclarationName: false
+  AfterIfMacros: true
+  BeforeNonEmptyParentheses: false
+
+SpaceAroundPointerQualifiers: Default
+SpaceInEmptyBlock: false
+SpaceInEmptyParentheses: false
+SpacesBeforeTrailingComments: 1
+SpacesInAngles: Never
+SpacesInConditionalStatement: false
+SpacesInContainerLiterals: true
+SpacesInCStyleCastParentheses: false
+SpacesInLineCommentPrefix: 
+  Minimum: 1
+  Maximum: -1
+
+SpacesInParentheses: false
+SpacesInSquareBrackets: false
+BitFieldColonSpacing: Both
+Standard: Latest
