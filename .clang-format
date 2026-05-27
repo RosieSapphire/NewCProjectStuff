@@ -20,7 +20,7 @@ RemoveBracesLLVM: true
 # Traditional indentation
 IndentWidth:     8
 TabWidth:        8
-UseTab:          ForIndentation
+UseTab:          Never
 ContinuationIndentWidth: 8
 
 # Keep things compact and horizontal
